@@ -19,7 +19,8 @@ OPENWEATHER_API_KEY=`5c1e600e74140573995689e8bba5e09d`
 6. Ejecutar `php artisan serve` para iniciar el servidor de desarrollo
 7. Acceder a la aplicación en `http://127.0.0.1:8000/`
 8. Compilar los Archivos Frontend con `npm run dev`
-
+9. Crear un Usuario desde la pantalla principal para Logearse en el sistema 
+10. Ingresar con el Usuario registrado.
 ### Funcionalidades
 * La aplicación utiliza la API de OpenWeatherMap para obtener los datos de clima
 * La aplicación utiliza la base de datos para almacenar los datos de clima
@@ -41,6 +42,32 @@ base de datos
 base de datos
 * La aplicación utiliza la variable de entorno `DB_USERNAME` para configurar el nombre de usuario de la base de datos
 * La aplicación utiliza la variable de entorno `DB_PASSWORD` para configurar la contraseña de la base de datos
+* La aplicación utiliza la variable de entorno `OPENWEATHER_API_KEY` para configurar la
+clave API de OpenWeather
+### Rutas
+* La aplicación utiliza las siguientes rutas:
++ `GET /climas` para listar los climas
++ `GET /climas/{id}` para ver detalles de un clima
++ `POST /climas` para crear un clima
++ `PUT /climas/{id}` para actualizar un clima
++ `DELETE /climas/{id}` para eliminar un clima
+### Controladores
+* La aplicación utiliza los siguientes controladores:
++ `ClimaController` para manejar las operaciones de clima
+### Modelos
+* La aplicación utiliza el modelo `Clima` para interactuar con la base de datos
+### Servicios
+* La aplicación utiliza el servicio `OpenWeatherService` para interactuar con la API de OpenWeather
+### Migraciones
+* La aplicación utiliza las migraciones para crear las tablas en la base de datos
+### Compatibilidad
+* La aplicación es compatible con Laravel 8.x
+* La aplicación es compatible con PHP 7.4
+* La aplicación es compatible con MySQL 8.x
+### Licencia
+* La aplicación está bajo la licencia MIT
+
+
 
 
 
